@@ -110,10 +110,12 @@ body {
 
 /* Content */
 .content {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   text-align: center;
   padding-bottom: 2em;
+  padding-bottom: 2em; /* Add padding to avoid content being cut off at the bottom */
+  color:#000;
 }
 
 * {
@@ -167,11 +169,6 @@ p {
   transform: scale(1);
 }
 
-.content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
 
 .sections {
   position: relative;
@@ -452,14 +449,6 @@ html, body {
   transform: scale(1);
 }
 
-/* Content */
-.content {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-  padding-bottom: 2em; /* Add padding to avoid content being cut off at the bottom */
-  color:#000;
-}
 
 /* Adjust as needed for your content */
 .music-player iframe,
