@@ -835,3 +835,47 @@ body.project-page {
 .project-description h2, .project-description h3, .project-description h4, .project-description p {
   text-align: left;
 }
+
+
+/* Tag Filters */
+.tag-filters {
+  margin-bottom: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+.tag-button {
+  padding: 0.5em 1em;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s, color 0.3s;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.tag-button:hover {
+  border: 1px dashed #000;
+  font-style: italic;
+}
+
+.tag-button.active {
+  background: #000;
+  color: #fff;
+  border: none;
+
+}
+
+.tag-button:focus {
+  outline: none;
+}
+
+/* Adjust work item display */
+.work-item {
+  display: block; /* Ensure work items are block elements for filtering */
+}

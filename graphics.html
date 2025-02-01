@@ -2,46 +2,63 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>All Graphics Works | Alessio Giuseppe Ferraioli</title>
+  <title>All Graphics Works | Your Name</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Include Google Fonts -->
-   
+  <!-- Include Google Fonts if needed -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Darker+Grotesque:wght@300..900&family=Varela+Round&display=swap" rel="stylesheet">
 
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Staatliches&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
+<body class="graphics-page">
+  <!-- Back Button -->
+  <div class="back-button">
+    <a href="index.html" class="btn">Back to Portfolio</a>
+  </div>
 
   <!-- Graphics Works Section -->
   <section class="all-works">
     <div class="content">
       <h1>All Graphics Works</h1>
+
+      <!-- Tag Filters -->
+      <div class="tag-filters">
+        <p>Select one or more filters:</p>
+        <!-- Tag buttons will be dynamically generated here -->
+      </div>
+
+      <!-- All Works Grid -->
       <div class="all-works-grid">
         <!-- Work Item 1 -->
-        <div class="work-item">
-          <img src="images/graphics/work1.jpg" alt="Graphic Work 1">
-          <h3>Work Title 1</h3>
-          <p>Detailed description of Work 1.</p>
+        <div class="work-item" data-tags="Photography, Illustration">
+          <a href="project1.html">
+            <img src="images/graphics/work1.jpg" alt="Graphic Work 1">
+            <h3>Work Title 1</h3>
+            <p>Detailed description of Work 1.</p>
+          </a>
         </div>
         <!-- Work Item 2 -->
-        <div class="work-item">
-          <img src="images/graphics/work2.jpg" alt="Graphic Work 2">
-          <h3>Work Title 2</h3>
-          <p>Detailed description of Work 2.</p>
+        <div class="work-item" data-tags="Design, Illustration">
+          <a href="project2.html">
+            <img src="images/graphics/work2.jpg" alt="Graphic Work 2">
+            <h3>Work Title 2</h3>
+            <p>Detailed description of Work 2.</p>
+          </a>
         </div>
-        <!-- Add all your graphics works here -->
+        <!-- Work Item 3 -->
+        <div class="work-item" data-tags="Photography, Design">
+          <a href="project3.html">
+            <img src="images/graphics/work3.jpg" alt="Graphic Work 3">
+            <h3>Work Title 3</h3>
+            <p>Detailed description of Work 3.</p>
+          </a>
+        </div>
+        <!-- Add more work items as needed -->
       </div>
     </div>
   </section>
 
-  <!-- Back Button or Home Link -->
-  <div class="back-button">
-    <a href="index.html" class="btn">Back to Portfolio</a>
-  </div>
-
-  
   <!-- Custom Cursor (Optional) -->
   <div class="cursor" id="cursor"></div>
 
