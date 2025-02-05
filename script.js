@@ -92,3 +92,4 @@ smoothScrollLinks.forEach(link => {
     target.scrollIntoView({ behavior: 'smooth' });
   });
 });
+
