@@ -885,7 +885,7 @@ body.project-page {
   color: #cccccc;
 }
 /* Responsive Adjustments for Mobile Devices */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   /* Home Content */
   .home-content {
     position: static;
