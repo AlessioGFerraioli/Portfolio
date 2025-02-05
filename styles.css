@@ -239,11 +239,19 @@ p {
   mix-blend-mode: difference;
 }
 
+/* Profile Picture */
+.profile-picture {
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+}
+
 /* Section Specific Styles */
 
 /* Home Section */
 #home {
-  background: url('images/alessio-schiena.png');
+  /* background: url('images/alessio-schiena.png');*/
   background-position: bottom left;
   background-repeat: no-repeat;
   background-attachment: fixed; /* Keeps the background image fixed during scrolling */
@@ -252,7 +260,8 @@ p {
 
 /* Music Section */
 #music {
-  background: url('images/alessio-schiena.png') no-repeat center center/cover;
+/*  background: url('images/alessio-schiena.png') no-repeat center center/cover;  */
+  background-color: #55aaff;
 }
 
 /* Video Section */
@@ -267,7 +276,8 @@ p {
 
 /* Science Section */
 #science {
-  background: url('images/science-bg.jpg') no-repeat center center/cover;
+/*  background: url('images/alessio-schiena.png') no-repeat center center/cover;  */
+  background-color: #ffdd55;
 }
 
 /* Graphics Section */
