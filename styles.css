@@ -877,12 +877,12 @@ body.project-page {
 
 .social-media-links a {
   color: #000;
-  font-size: 2rem;
+  font-size: 1rem;
   transition: color 0.3s;
 }
 
 .social-media-links a:hover {
-  color: #ff5722;
+  color: #cccccc;
 }
 
 /* Responsive Adjustments */
