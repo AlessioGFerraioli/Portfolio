@@ -884,9 +884,78 @@ body.project-page {
 .social-media-links a:hover {
   color: #cccccc;
 }
-
-/* Responsive Adjustments */
+/* Responsive Adjustments for Mobile Devices */
 @media (max-width: 768px) {
+  /* Home Content */
+  .home-content {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    padding: 2em 1em;
+  }
+
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .social-media-links {
+    justify-content: center;
+  }
+
+  .social-media-links a {
+    font-size: 1.5rem;
+  }
+
+  /* Navigation Panel */
+  .nav-panel {
+    width: 100%;
+    height: auto;
+    position: static;
+    right: auto;
+    top: auto;
+    transform: none;
+    box-shadow: none;
+    background: none;
+    overflow: visible;
+  }
+
+  .nav-panel.show {
+    right: auto;
+  }
+
+  /* Wheel Center (Navigation Buttons) */
+  .nav-panel .wheel-center {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+  }
+
+  .wheel-button {
+    width: 90%;
+    margin: 0.5em 0;
+    padding: 1em;
+    font-size: 1.2rem;
+  }
+
+  /* Navigation Toggle Button */
+  .nav-toggle-btn {
+    top: 20px;
+    right: 20px;
+  }
+
+  /* Overlay */
+  .overlay {
+    display: none; /* Disable overlay on mobile */
+  }
+
   .nav-wheel {
     left: 50%; /* Center the wheel */
     top: 70%;
@@ -896,6 +965,7 @@ body.project-page {
     left: 50%;
     top: 30%;
   }
+
 }
 
 
