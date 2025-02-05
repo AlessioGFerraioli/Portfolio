@@ -1081,6 +1081,12 @@ body.project-page {
   /* Disable custom cursor styles */
   body {
     cursor: auto;
+    background-image: url('images\alessio-schiena.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+  background-size: 200px 200px; /* Adjust size as needed */
+
   }
 }
 
