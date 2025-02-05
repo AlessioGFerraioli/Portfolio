@@ -1089,3 +1089,15 @@ body.project-page {
   }
 }
 
+
+/* Hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+
+  /* Disable custom cursor styles */
+  body {
+    cursor: auto;
+  }
+}
