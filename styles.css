@@ -243,12 +243,16 @@ p {
 
 /* Home Section */
 #home {
-  background: #fffafa;
+  background: url('images/alessio-schiena.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+  background-size: 200px 200px; /* Adjust size as needed */
 }
 
 /* Music Section */
 #music {
-  background: url('images/music-bg.jpg') no-repeat center center/cover;
+  background: url('images/alessio-schiena.png') no-repeat center center/cover;
 }
 
 /* Video Section */
@@ -1081,46 +1085,7 @@ body.project-page {
   /* Disable custom cursor styles */
   body {
     cursor: auto;
-    background-image: url('images\alessio-schiena.png');
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Keeps the background image fixed during scrolling */
-  background-size: 200px 200px; /* Adjust size as needed */
-
   }
 }
 
-/* Background Image for Home Section */
-body.home-active {
-  background-image: url('images/alessio-schiena.png');
-  background-position: bottom left;
-  background-repeat: no-repeat;
-  background-attachment: fixed; /* Keeps the background image fixed during scrolling */
-  background-size: 200px 200px; /* Adjust size as needed */
-}
 
-
-body.video-active {
-  background-image: none; /* No background image for this section */
-}
-
-/* Ensure no interference with content */
-body {
-  background-color: #fff; /* Set a background color if necessary */
-}
-
-
-
-/* Background Image for Music Section */
-body.music-active {
-  background-image: none;
-  /* Add desired background properties */
-}
-
-/* No Background Image for Other Sections */
-body.video-active,
-body.coding-active,
-body.science-active,
-body.graphics-active {
-  background-image: none;
-}
