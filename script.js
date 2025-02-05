@@ -93,65 +93,13 @@ smoothScrollLinks.forEach(link => {
   });
 });
 
-
-// Only execute this code on the graphics.html page
-if (document.body.classList.contains('graphics-page')) {
-
-  // Function to get all unique tags from the projects
-  function getAllTags() {
-    const workItems = Array.from(document.querySelectorAll('.work-item'));
-    const allTagsSet = new Set();
-
-    workItems.forEach(item => {
-      const tags = item.dataset.tags.split(',').map(tag => tag.trim());
-      tags.forEach(tag => allTagsSet.add(tag));
-    });
-
-    return Array.from(allTagsSet).sort();
-  }
-
-  // Function to create tag filter buttons
-  function createTagFilters(tags) {
-    const tagFiltersContainer = document.querySelector('.tag-filters');
-
-    tags.forEach(tag => {
-      const tagButton = document.createElement('button');
-      tagButton.classList.add('tag-button');
-      tagButton.textContent = tag;
-      tagButton.dataset.tag = tag;
-      tagFiltersContainer.appendChild(tagButton);
-    });
-  }
-
-  // Function to filter projects based on selected tags
-  function filterProjects() {
-    const selectedTags = Array.from(document.querySelectorAll('.tag-button.active')).map(btn => btn.dataset.tag);
-    const workItems = document.querySelectorAll('.work-item');
-
-    workItems.forEach(item => {
-      const itemTags = item.dataset.tags.split(',').map(tag => tag.trim());
-      if (selectedTags.length === 0 || selectedTags.every(tag => itemTags.includes(tag))) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  }
-
-  // Function to set up event listeners for tag buttons
-  function setupTagButtonListeners() {
-    const tagButtons = document.querySelectorAll('.tag-button');
-    tagButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        button.classList.toggle('active');
-        filterProjects();
-      });
-    });
-  }
-
-  // Initialize the tag filtering system
-  const tags = getAllTags();
-  createTagFilters(tags);
-  setupTagButtonListeners();
+// Function to detect touch devices
+function isTouchDevice() {
+  return ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 }
+
+// Existing code...
+
+// Get references to elements
+// Existing code for toggle button and custom cursor...
 

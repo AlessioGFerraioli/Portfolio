@@ -38,15 +38,6 @@ body {
   pointer-events: none;
 }
 
-/* Wheel Center */
-.wheel-center {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  position: relative;
-  /*animation: spin 20s linear infinite;*/
-  transform-origin: center;
-}
 
 /* Wheel Button */
 .wheel-button {
@@ -177,14 +168,6 @@ p {
 }
 
 
-
-.wheel-center {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  position: relative;
-  /*animation: spin 20s linear infinite;*/
-}
 
 .wheel-button {
   position: absolute;
@@ -836,46 +819,302 @@ body.project-page {
   text-align: left;
 }
 
+/* Navigation Wheel */
+.nav-wheel {
+  position: fixed;
+  top: 50%;
+  left: 75%; /* Moved to the right */
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 1000;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  opacity: 1;
+}
 
-/* Tag Filters */
-.tag-filters {
-  margin-bottom: 2em;
+/* Home Content */
+.home-content {
+  position: absolute;
+  top: 50%;
+  left: 25%; /* Positioned to the left */
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  z-index: 900;
+}
+
+.home-content h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5em;
+}
+
+.home-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1em;
+}
+
+.social-media-links {
+  margin-top: 2em;
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
+  gap: 1em;
   justify-content: center;
 }
 
-.tag-button {
-  padding: 0.5em 1em;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1px solid #000;
+.social-media-links a {
   color: #000;
-  border-radius: 20px;
-  cursor: pointer;
   font-size: 1rem;
-  transition: background 0.3s, color 0.3s;
-  font-weight: 700;
-  font-style: italic;
+  transition: color 0.3s;
 }
 
-.tag-button:hover {
-  border: 1px dashed #000;
-  font-style: italic;
+.social-media-links a:hover {
+  color: #cccccc;
+}
+/* Responsive Adjustments for Mobile Devices */
+@media (max-width: 1000px) {
+  /* Home Content */
+  .home-content {
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    padding: 2em 1em;
+  }
+
+  .home-content h1 {
+    font-size: 6rem;
+  }
+
+  .home-content h2 {
+    font-size: 3.5rem;
+  }
+
+  .home-content p {
+    font-size: 2rem;
+  }
+
+  .social-media-links {
+    justify-content: center;
+  }
+
+
+  .social-media-links a {
+    font-size: 2.5rem;
+  }
+
+  /* Navigation Panel */
+  .nav-panel {
+    width: 100%;
+    height: auto;
+    position: static;
+    right: auto;
+    top: auto;
+    transform: none;
+    box-shadow: none;
+    background: none;
+    overflow: visible;
+  }
+
+  .nav-panel.show {
+    right: auto;
+  }
+
+  /* Wheel Center (Navigation Buttons) */
+  .nav-panel .wheel-center {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+  }
+
+  .wheel-button {
+    width: 35%;
+    height: 35%;
+    margin: 1.5em 0;
+    padding: 1em;
+    font-size: 1.5rem;
+  }
+
+  /* Navigation Toggle Button */
+  .nav-toggle-btn {
+    top: 50px;
+    right: 20px;
+  }
+
+  /* Overlay */
+  .overlay {
+    display: none; /* Disable overlay on mobile */
+  }
+
+  .nav-wheel {
+    left: 50%; /* Center the wheel */
+    top: 70%;
+  }
+
+  .home-content {
+    left: 50%;
+    top: 30%;
+  }
+
 }
 
-.tag-button.active {
-  background: #000;
-  color: #fff;
-  border: none;
 
+/* Home Content Animation */
+.home-content {
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards 1s; /* Start after 1 second */
 }
 
-.tag-button:focus {
-  outline: none;
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
 }
 
-/* Adjust work item display */
-.work-item {
-  display: block; /* Ensure work items are block elements for filtering */
+/* Social Media Icons Animation */
+.social-media-links a {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.social-media-links a:nth-child(1) {
+  animation-delay: 1.2s;
+}
+
+.social-media-links a:nth-child(2) {
+  animation-delay: 1.4s;
+}
+
+.social-media-links a:nth-child(3) {
+  animation-delay: 1.6s;
+}
+
+.social-media-links a:nth-child(4) {
+  animation-delay: 1.8s;
+}
+
+.social-media-links a:nth-child(5) {
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* Responsive Adjustments for Mobile Devices */
+@media (max-width: 768px) {
+  /* Home Content */
+  .home-content {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    text-align: center;
+    padding: 2em 1em;
+  }
+
+  .home-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .home-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .home-content p {
+    font-size: 1rem;
+  }
+
+  .social-media-links a {
+    font-size: 1.5rem;
+  }
+
+  /* Navigation Wheel */
+  .nav-wheel {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 2em 0;
+    display: flex;
+    justify-content: center;
+    animation: none; /* Disable wheel rotation on mobile if desired */
+  }
+
+  /* Adjust wheel rotation (if any) */
+  .wheel-center {
+    width: 10px;
+    height: 10px;
+    border-radius: 70%;
+    position: relative;
+    transform-origin: center;
+    animation: none; /* Disable rotation animation on mobile */
+  }
+
+  /* Wheel Buttons */
+  .wheel-button {
+    position: relative;
+    margin: 0.5em;
+    width: 60px;
+    height: 60px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Remove hover effects on mobile */
+  .wheel-button:hover {
+    transform: none;
+  }
+}
+
+
+/* Hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .cursor {
+    display: none;
+  }
+
+  /* Disable custom cursor styles */
+  body {
+    cursor: auto;
+  }
+}
+
+/* Background Image for Home Section */
+body.home-active {
+  background-image: url('images/alessio-schiena.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Keeps the background image fixed during scrolling */
+  background-size: 200px 200px; /* Adjust size as needed */
+}
+
+
+body.video-active {
+  background-image: none; /* No background image for this section */
+}
+
+/* Ensure no interference with content */
+body {
+  background-color: #fff; /* Set a background color if necessary */
+}
+
+
+
+/* Background Image for Music Section */
+body.music-active {
+  background-image: none;
+  /* Add desired background properties */
+}
+
+/* No Background Image for Other Sections */
+body.video-active,
+body.coding-active,
+body.science-active,
+body.graphics-active {
+  background-image: none;
 }
