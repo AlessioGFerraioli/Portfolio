@@ -236,7 +236,7 @@ p {
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 100;
-  mix-blend-mode: difference;
+  mix-blend-mode: difference;  
 }
 
 /* Profile Picture */
@@ -261,7 +261,7 @@ p {
 /* Music Section */
 #music {
 /*  background: url('images/alessio-schiena.png') no-repeat center center/cover;  */
-  background-color: #55aaff;
+/*  background-color: #55aaff;*/
 }
 
 /* Video Section */
@@ -277,7 +277,7 @@ p {
 /* Science Section */
 #science {
 /*  background: url('images/alessio-schiena.png') no-repeat center center/cover;  */
-  background-color: #ffdd55;
+/*  background-color: #ffdd55; */
 }
 
 /* Graphics Section */
