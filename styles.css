@@ -751,12 +751,13 @@ color: #000;
 
 .project-description h2 {
 font-size: 2rem;
-margin-top: 2em;
+margin-top: 4em;
 color: #000;
 }
 
+
 .project-description p {
-margin-bottom: 1.5em;
+margin-bottom: 2em;
 color: #000;
 text-align: left;
 }
@@ -1099,3 +1100,67 @@ body.project-page {
 }
 
 
+
+/* Footer Styles */
+.site-footer {
+  background-color: #000;
+  color: #fff;
+  padding: 2em 1em;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-footer p {
+  color: #fff;
+  margin-bottom: 1.5em;
+  font-size: 1rem;
+}
+
+.footer-social-media {
+  margin-bottom: 1.5em;
+}
+
+.footer-social-media a {
+  color: #fff;
+  margin: 0 0.5em;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.footer-social-media a:hover {
+  color: #ff5722; /* Your accent color */
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.footer-link:hover {
+  color: #ff5722;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-link {
+    margin: 0.5em 0;
+  }
+}
