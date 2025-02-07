@@ -103,3 +103,16 @@ function isTouchDevice() {
 // Get references to elements
 // Existing code for toggle button and custom cursor...
 
+
+// Only add this if on index.html
+if (document.body.contains(document.querySelector('.footer-nav'))) {
+  const footerLinks = document.querySelectorAll('.footer-link');
+
+  footerLinks.forEach(link => {
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      const targetSection = link.getAttribute('data-section');
+      navigateToSection(targetSection);
+    });
+  });
+}
