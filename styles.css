@@ -99,6 +99,10 @@ body {
   opacity: 1;
 }
 
+.section h1, h2, h3, p {
+  text-align: left;
+}
+
 /* Content */
 .content {
   max-width: 1200px;
@@ -258,11 +262,6 @@ p {
   background-size: 200px 200px; /* Adjust size as needed */
 }
 
-/* Music Section */
-#music {
-/*  background: url('images/alessio-schiena.png') no-repeat center center/cover;  */
-/*  background-color: #55aaff;*/
-}
 
 /* Video Section */
 #video {
@@ -272,12 +271,6 @@ p {
 /* Coding Section */
 #coding {
   background: url('images/coding-bg.jpg') no-repeat center center/cover;
-}
-
-/* Science Section */
-#science {
-/*  background: url('images/alessio-schiena.png') no-repeat center center/cover;  */
-/*  background-color: #ffdd55; */
 }
 
 /* Graphics Section */
@@ -411,12 +404,6 @@ form button:hover {
   }
 }
 
-/* Global Styles */
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
 
 /* Sections Container */
 .sections {
@@ -562,7 +549,7 @@ html, body {
 
 /* Work Item */
 .work-item {
-  width: calc(33% - 2em);
+  width: calc(30% - 2em);
   background: rgba(255, 255, 255, 0.2);
   padding: 2em;
   border-radius: 10px;
