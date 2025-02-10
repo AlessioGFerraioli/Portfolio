@@ -387,7 +387,7 @@ form button:hover {
   to { transform: rotate(360deg); }
 }
 
-/* Responsive Design */
+/* Responsive Design for vertical screen */
 @media (max-width: 768px) {
   .wheel-button {
     width: 60px;
@@ -401,6 +401,10 @@ form button:hover {
 
   h2 {
     font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.5rem; 
   }
 }
 
