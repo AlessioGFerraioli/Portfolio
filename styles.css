@@ -99,9 +99,7 @@ body {
   opacity: 1;
 }
 
-.section h1, h2, h3, p {
-  text-align: left;
-}
+
 
 /* Content */
 .content {
@@ -518,13 +516,50 @@ form button:hover {
 
 /* Work Item */
 .work-item {
-  width: calc(30% - 2em);
-  background: rgba(255, 255, 255, 0.2);
+  width: 30%;
+  background: rgb(255, 255, 255);
   padding: 2em;
   border-radius: 10px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
   text-align: center;
   transition: transform 0.3s;
+  margin: 0 1em;
+}
+
+
+/* modifiche al work item per farlo un flexbox container sistemato */
+
+.work-preview {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 10px;
+}
+
+.work-item {
+  width: 100%;
+  max-width: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.work-item img {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+
+}
+
+.work-preview::after {
+  content: "";
+  width: 350px;
   margin: 0 1em;
 }
 
@@ -589,7 +624,6 @@ form button:hover {
   margin-top: 2em;
 }
 
-/* You can reuse .work-item styles */
 
 .back-button {
   position: fixed;
@@ -1091,6 +1125,11 @@ body.project-page {
   .social-media-links a {
     font-size: 1.5rem;
   }
+
+  .work-item p {
+    font-size: 3.5rem;
+  }
+
 
   /* Navigation Wheel */
   .nav-wheel {
