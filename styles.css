@@ -133,17 +133,26 @@ h1 {
   font-style: normal;
   font-size: 4.8rem;
   color: #000;
+  margin: 0.5rem;
 }
 
 h2 {
   font-size: 2.4rem;
   color:#000;
+  margin: 0.5rem;
 }
+
+h3 {
+  color:#000;
+  margin: 0.5rem;
+}
+
 
 p {
   font-size: 1.2rem;
   color:#000;
   text-align: left;
+  margin: 0.5rem;
 }
 
 .section {
@@ -862,7 +871,7 @@ body.project-page {
   color: #cccccc;
 }
 /* Responsive Adjustments for Mobile Devices */
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   /* Home Content */
   .home-content {
     top: auto;
@@ -1102,12 +1111,10 @@ body.project-page {
 
       /* Home Content */
   .home-content {
-    position: static;
-    top: auto;
-    left: auto;
     transform: none;
     text-align: center;
     padding: 2em 1em;
+    width: 80%;
   }
 
   .home-content h1 {
@@ -1122,20 +1129,42 @@ body.project-page {
     font-size: 1rem;
   }
 
-  .social-media-links a {
-    font-size: 1.5rem;
+    
+  .social-media-links {
+    margin-top: 2em;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
   }
 
-  .work-item p {
+  }
+
+  .social-media-links a {
+    font-size: 1rem;
+  }
+
+  .work-item h1 {
+    font-size: 5rem;
+  }
+
+  .work-item h2 {
     font-size: 3.5rem;
+  }
+
+  .work-item h3 {
+    font-size: 2rem;
+  }
+
+
+  .work-item p {
+    font-size: 1.5rem;
   }
 
 
   /* Navigation Wheel */
   .nav-wheel {
-    position: static;
-    top: auto;
-    left: auto;
+    top: 55%;
+    left: 20%;
     transform: none;
     margin: 2em 0;
     display: flex;
@@ -1155,7 +1184,6 @@ body.project-page {
 
   /* Wheel Buttons */
   .wheel-button {
-    position: relative;
     margin: 0.5em;
     width: 60px;
     height: 60px;
@@ -1163,12 +1191,23 @@ body.project-page {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: content-box;
   }
 
   /* Remove hover effects on mobile */
   .wheel-button:hover {
     transform: none;
   }
+
+  /* Positioning the buttons around the wheel */
+  .wheel-button:nth-child(1) { top: -40px; left: 80px; } /* Home */
+  .wheel-button:nth-child(2) { top: 0px; left: 160px; }   /* Music */
+  .wheel-button:nth-child(3) { top: 80px; left: 200px; } /* Video */
+  .wheel-button:nth-child(4) { top: 160px; left: 160px; } /* Coding */
+  .wheel-button:nth-child(5) { top: 200px; left: 80px; } /* Science */
+  .wheel-button:nth-child(6) { top: 160px; left: 0px; }   /* Graphics */
+  .wheel-button:nth-child(7) { top: 80px; left: -40px; } /* About */
+  .wheel-button:nth-child(8) { top: 0px; left: 0px; }     /* Contact */
 
   /* footer adjustements on mobile */
   .footer-nav {
