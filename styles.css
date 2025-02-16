@@ -139,12 +139,12 @@ h1 {
 h2 {
   font-size: 2.4rem;
   color:#000;
-  margin: 0.5rem;
+  margin: 1.5rem;
 }
 
 h3 {
   color:#000;
-  margin: 0.5rem;
+  margin: 1.5rem;
 }
 
 
@@ -153,6 +153,14 @@ p {
   color:#000;
   text-align: left;
   margin: 0.5rem;
+}
+
+a {
+  color:#bb0000;
+}
+
+a:hover {
+  color: #ff825c
 }
 
 .section {
@@ -527,7 +535,8 @@ form button:hover {
 .work-item {
   width: 30%;
   background: rgb(255, 255, 255);
-  padding: 2em;
+  /* padding: 2em;  se metto questo padding a 2em non si allineano più i work item verticalmente, non so perhcé, quidni lo levo anche se esteticamente lo preferirei */
+  padding: 1em;
   border-radius: 10px;
   backdrop-filter: blur(8px);
   text-align: center;
@@ -1135,8 +1144,6 @@ body.project-page {
     display: flex;
     gap: 1em;
     justify-content: center;
-  }
-
   }
 
   .social-media-links a {
