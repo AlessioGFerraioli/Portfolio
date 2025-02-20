@@ -1106,7 +1106,7 @@ body.project-page {
   }
 
   p {
-    font-size: 1.5rem; 
+    font-size: 0.9rem; 
   }
 
   /* adjust work-item widths so they are displayed in rows of one instead of rows of three */
@@ -1138,7 +1138,11 @@ body.project-page {
     font-size: 1rem;
   }
 
-    
+  .home-content img {
+    max-width: 300px;
+  }
+
+
   .social-media-links {
     margin-top: 2em;
     display: flex;
