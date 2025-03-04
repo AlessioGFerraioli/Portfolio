@@ -106,10 +106,41 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   text-align: center;
+  font-size: 1.2rem;
   padding-bottom: 2em;
   padding-bottom: 2em; /* Add padding to avoid content being cut off at the bottom */
   color:#000;
 }
+
+.content h2 {
+  font-size: 2.4rem;
+  margin: 1.5rem;
+}
+
+.content h3 {
+  margin: 1.5rem;
+}
+
+.content h4 {
+  font-weight: 600;
+  margin: 1.5rem;
+}
+
+.content p {
+  font-size: 1.2rem;
+  color: #000;
+  text-align: left;
+  margin: 0.5rem;
+}
+
+.content a {
+  color:#bb0000;
+}
+
+.content a:hover {
+  color: #ff825c
+}
+
 
 * {
   margin: 0;
