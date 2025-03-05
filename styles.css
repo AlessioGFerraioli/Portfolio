@@ -100,7 +100,13 @@ body {
 }
 
 
+.bold {
+  font-weight: 700;
+}
 
+.italic {
+  font-style: italic;
+}
 /* Content */
 .content {
   max-width: 1200px;
