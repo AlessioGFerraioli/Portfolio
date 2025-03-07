@@ -786,6 +786,7 @@ margin-bottom: 2em;
 .project-description {
 line-height: 1.6;
 color: #000;
+text-align: left;
 }
 
 .project-description h2 {
@@ -801,6 +802,9 @@ color: #000;
 text-align: left;
 }
 
+.project-description li {
+  margin: auto 2em;
+}
 .project-gallery {
 display: flex;
 flex-wrap: wrap;
@@ -864,9 +868,6 @@ body.project-page {
   margin: 2.5rem 0;
 }
 
-.project-description h2, .project-description h3, .project-description h4, .project-description p {
-  text-align: left;
-}
 
 /* Navigation Wheel */
 .nav-wheel {
