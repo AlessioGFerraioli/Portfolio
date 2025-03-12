@@ -1,7 +1,7 @@
 # Portfolio
 My Portfolio, as an exercise.
 
-You can visit the portfolio website [here]("https://alessiogferraioli.github.io/Portfolio/").
+You can visit the portfolio website [here]("https://alessiogferraioli.github.io/Portfolio/"). (https://alessiogferraioli.github.io/Portfolio/)[here] and (here)[https://alessiogferraioli.github.io/Portfolio/] or (here)["https://alessiogferraioli.github.io/Portfolio/"]
 
 This is a **work in progress** for a personal portfolio project that I'm building as an excercise while I'm learning web design.
 
