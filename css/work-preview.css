@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,600,600i,800");
+
+
+.content { 
+  padding: 2em 4em;
+}
+
+.content-title {
+  text-align: center;
+  line-height: 1;
+}
+
+.content-title h1 {
+  font-size: 4.8rem;
+  font-weight: 900; 
+  margin: 0.5rem;
+}
+
+.content-title h2 {
+  font-size: 2.4rem;
+  margin: 1.5rem;
+}
+
+.work-preview {
+  border: solid thin white;
+  padding: 2em 2em;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;  
+}
+
+.work-preview a:hover {
+  color: black;
+}
+
+.work-item {
+  border: solid thin white;
+  max-width: 350px;
+  padding: 1em;
+  margin: .5em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.work-item:hover {
+  opacity: 70%;
+}
+
+.work-item_image {
+  height: 40vh;
+  max-height: 10em;
+  overflow: hidden;
+}
+
+.work-item_image img {
+  height: 100%;
+  width: 100%;
+  max-width: 350px;
+  object-fit: cover;
+  object-position: center bottom;
+  border-radius: 5px;
+}
+
+.work-item_contenuto {
+  padding: 1em 0.5em 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+
+.work-item_titolo {
+  font-size: 0.9em;
+  text-align: center;
+  line-height: 1.2em;
+  padding: 0 0 0.5em 0;
+}
+
+.work-item_descrizione {
+  font-size: 0.7em;
+  line-height: 1.2em;
+  text-align: justify; 
+}
+
+
+
+@media (max-width: 37.5rem) {
+
+}
