@@ -1,7 +1,7 @@
 :root {
-    --testo-piccolo: 0.7vw;
-    --testo-normale: 1.5vw;
-    --testo-grande: 5vw;
+    --testo-piccolo-adapt: 0.7vw;
+    --testo-normale-adapt: 7vw;
+    --testo-grande-adapt: 5vw;
   }
   
   .contenitore-intestazione { 
@@ -19,8 +19,6 @@
     height: 100%;
     padding: 5rem 5rem;
   }
-  
- 
   
   
   .disclaimer-text {
@@ -66,20 +64,87 @@
   .project-description h2 {
     margin-top: 3em;
     margin-bottom: 1em;
+    margin-left: 0;
   }
   
   .project-description h3 {
     margin-top: 2em;
     margin-bottom: 0.5em;
+    margin-left: 0;
   }
   
   .project-description h4 {
     margin-top: 2em;
     margin-bottom: 0;
+    margin-left: 0;
   }
   
+  .project-description p {
+    text-align: justify;
+  }
   
   .site-footer {
     background-color: black;
     color: white;
   }
+
+
+  @media (max-width: 768px) {
+
+    .project-indice ul {
+      padding: 0;
+      font-size: 16px;
+    }
+
+    .project-indice ul ul {
+      padding: 0 0 0 1rem;
+      font-size: 16px;
+  }
+
+    .project-description {
+      padding: 0;
+    }
+
+    .project-description ul, .project-description li {
+      padding: 0;
+      font-size: 16px;
+    }
+
+    .project-description ul p {
+      font-size: 16px;
+    }
+
+    .project-description ul li {
+      font-size: 16px;
+    }
+
+    .project-description ul li p {
+      font-size: 16px;
+    }
+
+    .project-description p {
+      font-size: 16px;
+      margin: 0;
+    }
+
+    .project-description img, iframe {
+      display: block;
+      margin-top: 1em;
+      margin-bottom: 1em;
+      max-width: 70vw;
+    }
+
+    .disclaimer-text {
+      padding: 0;
+      margin: 0;
+      font-size: 12px;
+    }
+
+    .disclaimer-text p {
+      padding: 0;
+      margin: 2rem 0;
+      font-size: 12px;
+    }
+  }
+
+

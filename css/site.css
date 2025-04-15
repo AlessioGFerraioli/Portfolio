@@ -1076,6 +1076,10 @@ body.project-page {
     top: 30%;
   }
 
+  .project-description {
+    padding: 0 0;
+  }
+
 }
 
 
