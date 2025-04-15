@@ -1,0 +1,85 @@
+:root {
+    --testo-piccolo: 0.7vw;
+    --testo-normale: 1.5vw;
+    --testo-grande: 5vw;
+  }
+  
+  .contenitore-intestazione { 
+    background-color: rgba(104, 29, 29, 0.2);
+    width: 100vw;
+    height: 70vh;
+  }
+  
+  .intestazione { 
+    padding: 1em 5em;
+  }
+  
+  .titolo { 
+    width: 100%;
+    height: 100%;
+    padding: 5rem 5rem;
+  }
+  
+ 
+  
+  
+  .disclaimer-text {
+    max-width: 40em;
+    margin: 5em auto;
+    padding: 0 3em;
+  }
+  
+  .project-indice {
+    max-width: 40em;
+    margin: 5em auto;
+    padding: 0 3em;
+    font-size: var(--testo-normale);
+  }
+  
+  .project-indice ul {
+    padding: 0 3em;
+  }
+  
+  
+  .project-description {
+    max-width: 40em;
+    margin: 5em auto;
+    padding: 0 3em;
+  }
+  
+  .project-description ul {
+    padding: 0 2em;
+  }
+  
+  .project-description li {
+    margin: 1em 0;
+  }
+  
+  .project-description img, iframe {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .project-description h2 {
+    margin-top: 3em;
+    margin-bottom: 1em;
+  }
+  
+  .project-description h3 {
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+  }
+  
+  .project-description h4 {
+    margin-top: 2em;
+    margin-bottom: 0;
+  }
+  
+  
+  .site-footer {
+    background-color: black;
+    color: white;
+  }
