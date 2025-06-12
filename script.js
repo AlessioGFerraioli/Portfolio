@@ -6,6 +6,7 @@ window.onload = function() {
   
     // Show the home section
     const homeSection = document.getElementById('home');
+    const navWheel = document.getElementById('nav-wheel');
     homeSection.classList.add('active');
   };
   

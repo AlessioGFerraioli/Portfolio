@@ -77,14 +77,27 @@ body {
 /* Sections Container */
 .sections {
   position: relative;
+  display: flex;
   width: 100%;
   height: 100%;
   color:#000;
 }
 
+.home-sections {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  z-index: 1; /* Ensure it's above other sections */
+}
+
 /* Individual Sections */
 .section {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -216,12 +229,6 @@ a:hover {
   transform: scale(1);
 }
 
-
-.sections {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
 
 
 
@@ -440,12 +447,6 @@ form button:hover {
 }
 
 
-/* Sections Container */
-.sections {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
 
 /* Individual Sections */
 .section {
@@ -952,6 +953,41 @@ body.project-page {
   opacity: 1;
 }
 
+/* Navigation Bar */
+.navigation-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Navigation Panel */  
+
+/*
+.nav-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+*/
+
+
+
 /* Home Content */
 .home-content {
   position: absolute;
@@ -1288,8 +1324,6 @@ body.project-page {
 
   /* Navigation Wheel */
   .nav-wheel {
-    top: 55%;
-    left: 20%;
     transform: none;
     margin: 2em 0;
     display: flex;

@@ -74,13 +74,11 @@
 .work-item_titolo {
   font-size: 0.9em;
   text-align: center;
-  line-height: 1.2em;
   padding: 0 0 0.5em 0;
 }
 
 .work-item_descrizione {
   font-size: 0.7em;
-  line-height: 1.2em;
   text-align: justify; 
 }
 
