@@ -3,14 +3,14 @@
     --colorprimary: black;
     --colorsecondary: white;
     --coloraccent: orange;
-    --colorauxiliary: #555555;
+    --colorauxiliary: #c7c7c7;
     --font: "DM Sans", sans-serif;
     --h1: bold 54px/64px var(--font);
     --h2: bold 36px/36px var(--font);
     --h3: bold 24px/30px var(--font);
     --links: 200 18px/18px var(--font);
     --p: 200 18px/30px var(--font);
-    --subtex: 12px/20px var(--font);
+    --subtext: italic 12px/20px var(--font);
     --transition: 0.5s ease-in-out;
     --shadow: #000030 0px 0px 10px 0px;
     --shadowdark: #000030 0px 5px 10px 5px;
@@ -27,23 +27,27 @@ body {
     background-color: var(--colorsecondary);
     margin: 0;
     padding: 0; 
+    cursor: none; /* Hide default cursor */
 }
 
 content {
     margin: 0;
     padding: 1em 1em;
+    
 }
 
 a {
     font-family: var(--links);
     color: var(--colorprimary);
     text-decoration: none;
+    cursor: none; /* Hide default cursor */
 }
 
 a:hover {
     color: var(--coloraccent);
     text-decoration: none;
     transition: var(--transition);
+    cursor: none; /* Hide default cursor */
 
 }
 
@@ -98,19 +102,51 @@ p {
     align-items: top;
 }
 
+.categories {
+  padding: 4em 0;
+  text-align: center;
+}
+
 .category-item {
     padding: 0.5em 1em;
-    font-weight: 900;
-    border-radius: 5px;
-    color: var(--colorsecondary);
-    background-color: var(--colorprimary);
+    font: var(--h3)
 }
+
 
 .category-item:hover {
     transform: scale(1.05);
-    color: var(--colorsecondary);
+    color: var(--colorauxiliary);
     transition: var(--transition);
 }
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 1em;
+  }
+
+.social-media-link {
+    color: var(--colorauxiliary);
+    font: var(--links);
+}
+
+.social-media-link:hover {
+    color: var(--colorprimary);
+    transition: var(--transition);
+  }
+
+.contact {
+    text-align: center;
+    margin-top: 2em;
+}
+
+.contact-link {
+    color: var(--colorauxiliary);
+    font: var(--links);
+    text-decoration: none;
+}
+
 
 /* Footer Styles */
 .site-footer {
@@ -157,4 +193,20 @@ p {
 
 .footer-link:hover {
   color: var(--coloraccent);
+}
+
+
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: #3dc2c7;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 100;
+  mix-blend-mode: difference;  
 }
