@@ -1,0 +1,147 @@
+/* variables */
+:root {
+    --colorprimary: black;
+    --colorsecondary: white;
+    --coloraccent: orange;
+    --colorauxiliary: #555555;
+    --font: "DM Sans", sans-serif;
+    --h1: bold 54px/64px var(--font);
+    --h2: bold 36px/36px var(--font);
+    --h3: bold 24px/30px var(--font);
+    --links: 200 18px/18px var(--font);
+    --p: 200 18px/30px var(--font);
+    --subtex: 12px/20px var(--font);
+    --transition: 0.5s ease-in-out;
+    --shadow: #000030 0px 0px 10px 0px;
+    --shadowdark: #000030 0px 5px 10px 5px;
+}
+
+html {
+    scroll-behavior: y mandatory;
+}
+
+/* global styles */
+body {
+    font-family: var(--font);
+    color: var(--colorprimary);
+    background-color: var(--colorsecondary);
+    margin: 0;
+    padding: 0; 
+}
+
+content {
+    margin: 0;
+    padding: 1em 1em;
+}
+
+a {
+    font-family: var(--links);
+    color: var(--colorprimary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--coloraccent);
+    text-decoration: none;
+    transition: var(--transition);
+
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font);
+    color: var(--colorprimary);
+}
+
+h1 {
+    font: var(--h1);
+}
+
+h2 {
+    font: var(--h2);
+}
+
+h3 {
+    font: var(--h3);
+}
+
+h4 {
+    font: var(--h4);
+}
+
+p {
+    font: var(--p);
+    line-height: 1.5;
+    color: var(--colorprimary);
+}
+
+.subtext {
+    font: var(--subtex);
+    color: var(--colorprimary);
+}
+
+
+.hero {
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.section {
+    scroll-snap-align: start;
+    margin: 80px auto 0px auto;
+}
+
+.col {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: top;
+}
+
+
+/* Footer Styles */
+.site-footer {
+  background-color: var(--colorprimary);
+  color: var(--colorsecondary);
+  padding: 2em 1em;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.site-footer p {
+  color: var(--colorsecondary);
+  margin-bottom: 1.5em;
+}
+
+.footer-social-media {
+  margin-bottom: 1.5em;
+}
+
+.footer-social-media a {
+  color: var(--colorsecondary);
+  margin: 0 0.5em;
+}
+
+.footer-social-media a:hover {
+  color: var(--coloraccent);
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+}
+
+.footer-link {
+  color: var(--colorsecondary);
+  
+}
+
+.footer-link:hover {
+  color: var(--coloraccent);
+}

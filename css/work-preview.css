@@ -1,24 +1,10 @@
-@import url("https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,600,600i,800");
-
-
-.content { 
-  padding: 2em 4em;
-}
-
-.content-title {
-  text-align: center;
-  line-height: 1;
-}
-
-.content-title h1 {
-  font-size: 4.8rem;
-  font-weight: 900; 
-  margin: 0.5rem;
-}
-
-.content-title h2 {
-  font-size: 2.4rem;
-  margin: 1.5rem;
+.all-works {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .work-preview {
@@ -45,12 +31,13 @@
 }
 
 .work-item:hover {
+  transform: scale(1.02);
   opacity: 70%;
+  transition: var(--transition);
 }
 
 .work-item_image {
   height: 40vh;
-  max-height: 10em;
   overflow: hidden;
 }
 
@@ -64,21 +51,25 @@
 }
 
 .work-item_contenuto {
-  padding: 1em 0.5em 0;
+  padding: 0em 0em 2em 0;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
 
-
 .work-item_titolo {
-  font-size: 0.9em;
   text-align: center;
-  padding: 0 0 0.5em 0;
+  padding: 0;
+  margin: 0;
+}
+
+.work-item_titolo h3 {
+  font: var(--h3);
+  color: var(--colorprimary);
+  margin: 1em 0 0 0;
 }
 
 .work-item_descrizione {
-  font-size: 0.7em;
   text-align: justify; 
 }
 
