@@ -2,7 +2,8 @@
 :root {
     --colorprimary: black;
     --colorsecondary: white;
-    --coloraccent: orange;
+    --coloraccent: #d48702;
+    --colordarkaccent: #c23d38;
     --colorauxiliary: #c7c7c7;
     --font: "DM Sans", sans-serif;
     --h1: bold 54px/64px var(--font);
@@ -90,6 +91,12 @@ p {
     text-align: center;
 }
 
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
+
 .section {
     scroll-snap-align: start;
     margin: 80px auto 0px auto;
@@ -145,6 +152,72 @@ p {
     color: var(--colorauxiliary);
     font: var(--links);
     text-decoration: none;
+}
+
+/* Navigation Wheel */
+
+.nav-circle {
+  display: grid;
+  grid-template-areas: "layer";
+  place-items: center;
+  border-radius: 50%;
+  margin: auto;
+  --radius: 20vmin;
+  width: calc(2 * var(--radius) + 100px);
+  height: calc(2 * var(--radius) + 100px);
+}
+
+.wheel-button {
+  grid-area: layer;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+
+  display: grid;
+  place-items: center;
+
+  background: var(--colorprimary);
+  color: var(--colorsecondary);
+  font-weight: 900;
+  font-size: 1rem;
+
+  /* Decimal value, 0-1 based on the child's index. */
+  --d: calc(var(--i) / var(--total));
+  /* Offset to get better starting placement on the circle */
+  --r-offset: -0.25turn;
+  /* Full circle */
+  --r-amount: 1turn;
+  /* Rotation based on the decimal and r modifiers */
+  --r: calc((var(--r-amount) * var(--d)) + var(--r-offset));
+  /* Rotate, transform out, then negative rotation so the content appears upright */
+  --transform_rotate: rotate(var(--r)) translate(var(--radius))
+    rotate(calc(-1 * var(--r)));
+
+  transform: var(--transform_rotate);
+  transition: transform 1.2s ease-in-out;
+
+}
+
+.wheel-button:hover {
+  transition: 0.2s;
+   color: var(--colorsecondary);;
+   background-color: var(--coloraccent);
+  }
+
+.wheel-buttosdn {
+  position: relative;
+  background: var(--colorprimary);
+  color: var(--colorsecondary);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* per farli tondi */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 900;
+  transition: transform --var(--transition);
 }
 
 
@@ -203,7 +276,7 @@ p {
   left: 0;
   width: 15px;
   height: 15px;
-  background: #3dc2c7;
+  background: #3dc2c7; /* color difference of the dark red */
   border-radius: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
