@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+    <html lang=en>
+        <title>Alessio G. Ferraioli</title>
+        <link rel=preconnect href=https://fonts.googleapis.com>
+        <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Song+Myung&amp;display=swap" rel=stylesheet>
+        <link rel=stylesheet href="./css/style.css">
+        <meta name=viewport content="width=device-width, initial-scale=1"><body>
+        
+        <nav>
+            <ul>
+                <li><a href=#about>About</a></li>
+                <li><a href=#service>Services</a></li>
+                <li><a href=#contact>Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id=about class=about>
+            <div class=empty></div>
+            <article>
+                <div class=title>
+                    <h1>Alessio G. Ferraioli</h1>
+                </div>
+                <div class=description>
+                    <p>The mind, the man, the sword that draws a sharp line between the sky and the sea, the hatchlings searching for the wood, the smell of the trees.</p>
+                </div>
+            </article>
+        </section>
+
+        <section id=service class="service service-sword sticky">
+            <article>      
+                <figure>  
+                    <img src=/faro.81e06c87.png width=200>
+                </figure>
+                <div class=text>
+                    <h2>The Sword</h2>
+                    <p>The height of the light is opening outside of the window.</p>
+                    <a href=https://bandcamp.com/alessiogferraioli>More about The Sword</a>
+                </div>
+            </article>
+        </section>
+        
+        <section class="service service-edge sticky">
+            <article>   
+                <figure>
+                    <img src=/chiesa.acf8720b.png width=200>
+                </figure>
+                <div class=text>   
+                    <h2>The Edge</h2>
+                    <p>The height of the light is opening outside of the window.</p>
+                    <a href=https://www.behance.net/alessiosaffalo>More about The Edge</a>
+                </div>
+            </article>
+        </section>
+
+        <section class="service service-light sticky">
+            <article>
+                <figure>
+                    <img src=/sassi.1aba3c3d.png width=200>
+                </figure>
+                <div class=text>
+                    <h2>The Light</h2>
+                    <p>The heigh of the light is opening outside of the window.</p>
+                    <a href=https://www.domestika.org/it/alessioferraioli>More about The Light</a>
+                </div>
+            </article>
+        </section>
+
+        <section id=contact class="contact full-screen">
+            <a href=mailto:alessioferraioli@hotmail.it>alessioferraioli@hotmail.it</a>
+        </section>
+
+        <script>let emptyElement=document.querySelector(".about .empty"),titleElement=document.querySelector(".about .title"),figureElements=document.querySelectorAll(".service figure");function handleMouseMove(e){emptyElement.style.flexBasis=e.clientX+"px",titleElement.style.flexBasis=e.clientY/2+"px",figureElements.forEach(function(t){t.style.flexBasis=window.innerWidth-e.clientX+"px"})}console.log(figureElements),window.addEventListener("mousemove",handleMouseMove);</script>
+
+    

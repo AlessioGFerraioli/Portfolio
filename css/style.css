@@ -1,0 +1,456 @@
+/* CSS reset: setting box-sizing to border-box for all elements, meaning that widht and height are calculated including the border and padding */
+* {
+    box-sizing: border-box;
+}
+
+/* general styles: remove default margin and padding, changing background and text color, setting font size and family */
+html, body {
+    --border-radius: 100px; /* setting a CSS variable for border radius to be used throughout the stylesheet */
+    --color1: #ffffff; /* dark blue */
+    --color2: #0dc034; /* light purple */
+    --color4: #000000; /* light green */
+    --color5: #000000;
+    --color3: #000000;
+    --backgroundcolor: #ffffff; /* black */
+    --highlightcolor: #000000; /* white */
+    --coloraccent: #d48702;
+    --colordarkaccent: #c23d38;
+    --colorauxiliary: #c7c7c7;
+    --border: 0px dashed black;
+    --gutter: 3.125vw 6.25vw; /* setting a CSS variable for gutter/padding to be used throughout the stylesheet */
+    --transition: 0.5s ease-in-out;
+    margin: 0;
+    padding: 0;
+    background: var(--backgroundcolor);
+    color: var(--highlightcolor);
+    font-size: 30px;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    cursor: none; /* Hide default cursor */
+
+}
+
+h1 {
+    font-size: 70px;
+    line-height: 1em;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 60px;
+    margin: 0px;
+}
+
+a {
+    font-family: var(--links);
+    color: var(--colorprimary);
+    text-decoration: none;
+    cursor: none; /* Hide default cursor */
+}
+a:hover {
+    color: var(--coloraccent);
+    text-decoration: none;
+    transition: var(--transition);
+    cursor: none; /* Hide default cursor */
+
+}
+
+section {
+    display: flex;
+    width: 100%; /* making each section take full viewport width and height */
+    position: relative; /* setting position relative to use absolute positioning for the nav bar */
+    height: calc(100vh - 100px); /* making each section take not the full viewport height but leaving space for the navigation bar */
+    top: 100px; /* pushing the sections down by the height of the nav bar */
+    z-index: 2; /* making sure the sections are above other content and under other */
+}
+
+/* setting the sections that should scroll a certain way ("sticky" scrolling) to be sticky */
+section.sticky {
+    position: sticky;
+    margin-top: 100px; /* making the sticky section stick below the navigation bar */
+}
+
+/* setting the sections intended for being full screen to cover the entire viewport */
+section.full-screen {
+    height: 100vh; /* making the section take the full viewport height */
+    top: 0; /* making the section start from the top of the viewport */
+    margin-top: 0; /* removing any top margin */
+    z-index: 3; /* making sure the full-screen section is above other content */
+}
+
+
+
+/* -----------------------------------------------------------------------*/
+/* styles for the navigation bar */
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;   
+    font-size: 20px;
+    z-index: 1; /* making sure the navigation bar is above other content */
+}
+
+nav ul {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+
+
+nav ul li {
+            list-style: none;
+            margin-left: 45px;
+}
+
+nav ul li a {
+                color: var(--highlightcolor);
+                font-family: "Song Myung", serif;
+                font-weight: 400;
+                font-style: normal;
+}
+
+
+/* ________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+*/
+/* _____________________________ ABOUT _____________________________ */
+/* styles for the about section */
+
+.social-media-link {
+    color: var(--colorauxiliary);
+    font: var(--links);
+}
+
+.social-media-link:hover {
+    color: #000000;
+    transition: var(--transition);
+  }
+
+
+section.about .empty {
+    flex-basis: 37.5vw;
+    background-color: white;
+    border-radius: var(--border-radius);
+    transition: flex-basis 1s cubic-bezier(0,.9,.4,.99); /* making the flex-basis change transition smoothly over 0.5 seconds, with the selected bezier function as timing funciton*/
+    border: var(--border);
+    align-items: center;
+    justify-content: center;
+    display:flex;
+}
+
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    border: solid thin white;
+    justify-content: center;
+    align-items: center;
+    }
+
+
+section.about article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+section.about article .title {
+    background: var(--color1);
+    border-radius: var(--border-radius);
+    flex: 1;
+    display: flex; /* using flexbox to decide where to automatically put the content i.e. the text */
+    align-items: flex-end; /* align text to the bottom of the container */
+    padding: var(--gutter); /* padding around the text, using vw to make it responsive */
+    transition: flex-basis 1s cubic-bezier(0,.9,.4,.99); /* making the flex-basis change transition */
+    border: var(--border);
+
+}
+
+
+section.about article .description {
+    background: #ffffff;
+    border-radius: var(--border-radius);
+    color: var(--backgroundcolor);
+    flex: 1; 
+    display: flex; /* using flexbox to decide where to automatically put the content i.e. the text */
+    align-items: center; /* align text to the vertical center of the container */
+    padding: var(--gutter); /* padding around the text, using vw to make it responsive */
+    border: var(--border);
+}
+
+
+
+
+/* ________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+*/
+/* _____________________________ SERVICE _____________________________ */
+/* styles for the service section */
+
+
+
+section.service article {
+    display: flex;
+    width: 100%;
+    
+}
+
+
+section.service figure {
+    background: var(--color3);
+    border-radius: var(--border-radius);
+    margin: 0; /* removing default margin of figure */
+    flex-basis: 56.25vw; /* setting the size of this container in relation to the viewport */
+    display: flex; /* using flexbox to decide where to automatically put the content i.e. the text */
+    align-items: center; /* align text to the vertical center of the container */
+    justify-content: center; /* align text to the horizontal center of the container */
+    max-width: 62.5vw; /* setting a max width to prevent the image from getting too big and coer the text */
+    min-width: 12.5vw; /* setting a min width to prevent the image from getting too small and becoming unrecognizable */
+    transition: flex-basis 1s cubic-bezier(0,.9,.4,.99); /* making the flex-basis change transition smoothly over 1 seconds*/
+
+}
+
+section.service figure img {
+    width: 80%; /* making the image take half the width of the container */
+}
+
+section.service .text {
+    background: var(--color5);
+    border-radius: var(--border-radius);
+    color: #ffffff;
+    flex: 1; /* making this container take the remaining space */
+    display: flex; /* using flexbox to decide where to automatically put the content i.e. the text */
+    flex-direction: column; /* stacking the text vertically */
+    justify-content: center; /* align text to the vertical center of the container */
+    padding: var(--gutter); /* padding around the text, using vw to make it responsive */
+}
+
+section.service .text a {
+    font-family: "Song Myung", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* service section animation */
+
+
+
+@keyframes float {
+    0% {
+        transform: translateY(-5%);  /* moving the element up by 5% of its height*/
+    }
+
+    100% {
+        transform: translateY(5%); /* moving the element down by 5% */
+    }
+}
+
+section.service figure img {
+    animation-name: float;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; /* making the animation reverse direction each time it completes */
+    animation-timing-function: cubic-bezier(.68,.03,.39,1.02); /* making the animation start and end smoothly */
+
+}
+
+.categories-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 20px 20px 30px;
+    }
+
+.categories-button {
+    margin: 0em;
+    padding: 0.5em 0em;
+    border: solid 4px #000000;
+    border-radius: 30px;
+    background: var(--colorprimary);
+    color: var(--colorsecondary);
+    font-weight: 700;
+    
+    transition: var(--transition);
+    border-radius: 50%;
+
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    background: rgb(248, 19, 19);
+    font-weight: 900;
+    font-size: 1rem;
+    transition: transform 1.2s ease-in-out;
+}
+
+.wheel-button:hover {
+  transition: 0.2s;
+   color: var(--colorsecondary);;
+   background-color: var(--coloraccent);
+  }
+
+.wheel-buttosdn {
+  position: relative;
+  background: var(--colorprimary);
+  color: var(--colorsecondary);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* per farli tondi */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 900;
+  transition: transform --var(--transition);
+}
+
+
+
+
+/* different background colors for each service section figure */
+
+section.service-sword figure {
+    background: var(--color3);
+}
+
+section.service-edge figure {
+    background: var(--coloraccent);
+}
+
+section.service-light figure {
+    background: var(--color1);
+}
+
+
+/* different font colors for each service section heading text and link text */
+section.service-sword .text h2, section.service-sword .text a {
+    color: var(--color1);
+}
+section.service-edge .text h2, section.service-edge .text a {
+    color: var(--coloraccent);
+}
+section.service-light .text h2, section.service-light .text a {
+    color: var(--color1);
+}
+
+
+
+
+
+/* making the layout responsive for smaller screens */
+@media only screen and (max-width: 768px) {
+
+    section.service article {
+        flex-direction: column; /* stacking the containers vertically instead of side by side */    
+    }
+
+    section.service figure {
+        flex-basis: 25vh; /* changing the size of this container in relation to the viewport height instead of width */
+    }
+
+        section.service figure img {
+        width: 20%; /* making the image take less width of the container */
+    }
+
+}
+
+
+
+/* ________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________
+*/
+/* _____________________________ CONTACT _____________________________ */
+
+/* contact section styles */
+section.contact {
+    background: linear-gradient(var(--colorauxiliary), #ffffff 30%, var(--coloraccent) 60%, var(--colordarkaccent) 70%, #000000 75%);
+    border-radius: var(--border-radius);
+    align-items: center;
+    justify-content: center;
+}
+
+section.contact a {
+    font-size: 130px;
+    color: var(--backgroundcolor);
+    font-weight: 700;
+    transition: filter 2s cubic-bezier(.68,.03,.39,1.02); /* making the color change transition smoothly over 2 seconds, with the selected bezier function as timing funciton*/
+    will-change: filter; /* giving the browser a hint that the filter property will change, so it can optimize performance */
+}
+
+section.contact a:hover {
+    filter: blur(20px); /* adding a slight blur effect on hover */
+}
+
+
+
+
+/* making the contact section text adjust if it does not fit the screen (it's 1440px wide)*/
+@media only screen and (max-width: 1440px) {
+    section.contact a {
+        font-size: 70px;
+    }
+}
+
+
+/* making the layout responsive for smaller screens */
+@media only screen and (max-width: 768px) {
+
+    html, body {
+        --border-radius: 50px; /* reducing the border radius for smaller screens */
+        --gutter: 6.25vw; /* increasing the gutter/padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 40px;
+    }
+
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    section.contact a {
+        transform: rotate(90deg); /* rotating the text to fit better on smaller screens */
+    }
+
+}
+
+
+
+
+/* Custom Cursor */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background: #3dc2c7; /* color difference of the dark red */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 100;
+  mix-blend-mode: difference;  
+}
