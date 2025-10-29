@@ -382,7 +382,7 @@ ________________________________________________________________________________
 
 /* contact section styles */
 section.contact {
-    background: linear-gradient(var(--colorauxiliary), #ffffff 30%, var(--coloraccent) 60%, var(--colordarkaccent) 70%, #000000 75%);
+    background: linear-gradient(var(--colorauxiliary), #dce9f1 30%, var(--coloraccent) 60%, var(--colordarkaccent) 70%, #000000 75%);
     border-radius: var(--border-radius);
     align-items: center;
     justify-content: center;
@@ -432,6 +432,7 @@ section.contact a:hover {
     }
 
     section.contact a {
+        font-size: 40px;
         transform: rotate(90deg); /* rotating the text to fit better on smaller screens */
     }
 
