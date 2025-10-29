@@ -73,6 +73,22 @@
   text-align: justify; 
 }
 
+.view-all-button {
+  margin: 2em;
+  margin-bottom: 4em;
+  padding: 2em;
+  font-size: 1.2em;
+  text-align: center;
+  width: 100%;
+}
+.view-all-button .btn {
+
+  padding: 0.8em 1.5em;
+  font: var(--h2);
+  border: 2px solid var(--colorprimary);
+  border-radius: 5px;
+  text-decoration: none;
+}
 
 
 @media (max-width: 37.5rem) {
